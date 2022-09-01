@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/toolbar_back"
+        android:icon="@drawable/ic_baseline_arrow_back_24"
+        app:showAsAction="always"
+        android:title="뒤로" />
+
+    <item
+        android:id="@+id/toolbar_add"
+        android:icon="@drawable/ic_baseline_add_circle_24"
+        app:showAsAction="always"
+        android:title="검색 창" />
+</menu>

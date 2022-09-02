@@ -22,18 +22,15 @@ import com.bumptech.glide.Glide;
 import com.example.mybus.databinding.ActivityMainBinding;
 import com.example.mybus.databinding.NaviHeaderBinding;
 import com.example.mybus.kakaoLogin.KakaoLogin;
-import com.example.mybus.menu.HomeEdit;
-import com.example.mybus.menu.Login;
-import com.example.mybus.menu.MyAlarm;
-import com.example.mybus.menu.OpenSource;
-import com.example.mybus.roomrepo.BusRepository;
-import com.example.mybus.search.Search;
+import com.example.mybus.menu.HomeEditActivity;
+import com.example.mybus.menu.LoginActivity;
+import com.example.mybus.menu.MyAlarmActivity;
+import com.example.mybus.menu.OpenSourceActivity;
+import com.example.mybus.search.SearchActivity;
 import com.example.mybus.viewmodel.MainViewModel;
 import com.example.mybus.vo.User;
 import com.google.android.material.navigation.NavigationView;
 import com.kakao.sdk.user.UserApiClient;
-
-import javax.inject.Inject;
 
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -74,13 +71,12 @@ public class Main extends AppCompatActivity {
 
         // 네비게이션 아이템 클릭 이벤트
         navi.setNavigationItemSelectedListener(menuItem -> {
-            Intent intent;
             switch(menuItem.getItemId()){
                 case R.id.move_login:
                     UserApiClient.getInstance().me((user, error) -> {
                         if (error != null){
                             // 로그인 안 된 상태
-                            Intent intent2 = new Intent(this, Login.class);
+                            Intent intent2 = new Intent(this, LoginActivity.class);
                             startActivity(intent2);
                             finish();
                         }else{
@@ -89,7 +85,7 @@ public class Main extends AppCompatActivity {
                             UserApiClient.getInstance().logout(errors ->{
                                 return null;
                             });
-                            Intent intent3 = new Intent(this, Login.class);
+                            Intent intent3 = new Intent(this, LoginActivity.class);
                             startActivity(intent3);
                             finish();
                         }
@@ -97,16 +93,19 @@ public class Main extends AppCompatActivity {
                     });
                     break;
                 case R.id.move_my_alarm:
-                    intent = new Intent(this, MyAlarm.class);
-                    startActivity(intent);
+                    Intent goAlarm = new Intent(this, MyAlarmActivity.class);
+                    startActivity(goAlarm);
+                    break;
                 case R.id.move_home_edit:
                     // 홈 화면 편집으로 이동
-                    intent = new Intent(this, HomeEdit.class);
-                    startActivity(intent);
+                    Intent goHomeEdit = new Intent(this, HomeEditActivity.class);
+                    startActivity(goHomeEdit);
+                    break;
                 case R.id.move_open_source:
                     // 오픈소스 정보로 이동
-                    intent = new Intent(this, OpenSource.class);
-                    startActivity(intent);
+                    Intent goOpenSource = new Intent(this, OpenSourceActivity.class);
+                    startActivity(goOpenSource);
+                    break;
             }
             return false;
         });
@@ -144,7 +143,7 @@ public class Main extends AppCompatActivity {
                 return true;
 
             case R.id.toolbar_search:
-                Intent intent = new Intent(this, Search.class);
+                Intent intent = new Intent(this, SearchActivity.class);
                 startActivity(intent);
 
             case R.id.toolbar_home_edit:

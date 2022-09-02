@@ -1,111 +1,164 @@
 package com.example.mybus.apisearch.itemList;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class StopUidSchList {
     @SerializedName("stId")
+    @Expose
     public String stId;
     @SerializedName("stNm")
+    @Expose
     public String stNm;
     @SerializedName("arsId")
+    @Expose
     public String arsId;
     @SerializedName("busRouteId")
+    @Expose
     public String busRouteId;
     @SerializedName("rtNm")
+    @Expose
     public String rtNm;
     @SerializedName("busRouteAbrv")
+    @Expose
     public String busRouteAbrv;
     @SerializedName("sectNm")
+    @Expose
     public String sectNm;
     @SerializedName("gpsX")
+    @Expose
     public String gpsX;
     @SerializedName("gpsY")
+    @Expose
     public String gpsY;
     @SerializedName("posX")
+    @Expose
     public String posX;
     @SerializedName("posY")
+    @Expose
     public String posY;
     @SerializedName("stationTp")
+    @Expose
     public String stationTp;
     @SerializedName("firstTm")
+    @Expose
     public String firstTm;
     @SerializedName("lastTm")
+    @Expose
     public String lastTm;
     @SerializedName("term")
+    @Expose
     public String term;
     @SerializedName("routeType")
+    @Expose
     public String routeType;
     @SerializedName("nextBus")
+    @Expose
     public String nextBus;
     @SerializedName("staOrd")
+    @Expose
     public String staOrd;
     @SerializedName("vehId1")
+    @Expose
     public String vehId1;
     @SerializedName("plainNo1")
+    @Expose
     public Object plainNo1;
     @SerializedName("sectOrd1")
+    @Expose
     public String sectOrd1;
     @SerializedName("stationNm1")
+    @Expose
     public String stationNm1;
     @SerializedName("traTime1")
+    @Expose
     public String traTime1;
     @SerializedName("traSpd1")
+    @Expose
     public String traSpd1;
     @SerializedName("isArrive1")
+    @Expose
     public String isArrive1;
     @SerializedName("repTm1")
+    @Expose
     public String repTm1;
     @SerializedName("isLast1")
+    @Expose
     public String isLast1;
     @SerializedName("busType1")
+    @Expose
     public String busType1;
     @SerializedName("vehId2")
+    @Expose
     public String vehId2;
     @SerializedName("plainNo2")
+    @Expose
     public Object plainNo2;
     @SerializedName("sectOrd2")
+    @Expose
     public String sectOrd2;
     @SerializedName("stationNm2")
+    @Expose
     public String stationNm2;
     @SerializedName("traTime2")
+    @Expose
     public String traTime2;
     @SerializedName("traSpd2")
+    @Expose
     public String traSpd2;
     @SerializedName("isArrive2")
+    @Expose
     public String isArrive2;
     @SerializedName("repTm2")
+    @Expose
     public Object repTm2;
     @SerializedName("isLast2")
+    @Expose
     public String isLast2;
     @SerializedName("busType2")
+    @Expose
     public String busType2;
     @SerializedName("adirection")
+    @Expose
     public String adirection;
     @SerializedName("arrmsg1")
+    @Expose
     public String arrmsg1;
     @SerializedName("arrmsg2")
+    @Expose
     public String arrmsg2;
     @SerializedName("arrmsgSec1")
+    @Expose
     public String arrmsgSec1;
     @SerializedName("arrmsgSec2")
+    @Expose
     public String arrmsgSec2;
     @SerializedName("nxtStn")
+    @Expose
     public String nxtStn;
     @SerializedName("rerdieDiv1")
+    @Expose
     public String rerdieDiv1;
     @SerializedName("rerdieDiv2")
+    @Expose
     public String rerdieDiv2;
     @SerializedName("rerideNum1")
+    @Expose
     public String rerideNum1;
     @SerializedName("rerideNum2")
+    @Expose
     public String rerideNum2;
     @SerializedName("isFullFlag1")
+    @Expose
     public String isFullFlag1;
     @SerializedName("isFullFlag2")
+    @Expose
     public String isFullFlag2;
     @SerializedName("deTourAt")
+    @Expose
     public String deTourAt;
     @SerializedName("congestion")
+    @Expose
     public String congestion;
 
 

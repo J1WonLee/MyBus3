@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mybus.apisearch.itemList.BusSchList;
@@ -13,7 +12,7 @@ import com.example.mybus.databinding.SearchListItemBinding;
 
 import java.util.List;
 
-public class SearchListAdapter  extends RecyclerView.Adapter<SearchListAdapter.SearchViewHolder> {
+public class BusSearchListAdapter extends RecyclerView.Adapter<BusSearchListAdapter.SearchViewHolder> {
     private List<BusSchList> lists;
 
     @NonNull

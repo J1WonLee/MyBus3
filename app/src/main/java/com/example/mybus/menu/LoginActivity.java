@@ -20,7 +20,7 @@ import javax.inject.Inject;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
     private boolean isLogin = false;        // 로그인 성공 여부
     @Inject

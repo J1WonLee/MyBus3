@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class Search extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
     private ActivitySearchBinding binding;
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;

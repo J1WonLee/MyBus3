@@ -2,7 +2,7 @@ package com.example.mybus.apisearch.itemList;
 
 import com.google.gson.annotations.SerializedName;
 
-public class StopSchList {
+public class StopSchList implements Comparable<StopSchList>{
     @SerializedName("stId")
     public String stId;
     @SerializedName("stNm")
@@ -17,6 +17,22 @@ public class StopSchList {
     public String posY;
     @SerializedName("arsId")
     public String arsId;
+
+    @Override
+    public int compareTo(StopSchList stopSchList) {
+        return stId.compareTo(stopSchList.getStId());
+    }
+
+    // 다음 진행 방향
+    public String nextDir;
+
+    public String getNextDir() {
+        return nextDir;
+    }
+
+    public void setNextDir(String nextDir) {
+        this.nextDir = nextDir;
+    }
 
     public String getStId() {
         return stId;
@@ -73,4 +89,6 @@ public class StopSchList {
     public void setArsId(String arsId) {
         this.arsId = arsId;
     }
+
+
 }

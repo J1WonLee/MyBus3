@@ -12,9 +12,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-import com.example.mybus.menu.Login;
-import com.kakao.sdk.auth.AuthApiClient;
-import com.kakao.sdk.common.model.KakaoSdkError;
+import com.example.mybus.menu.LoginActivity;
 import com.kakao.sdk.user.UserApiClient;
 
 
@@ -65,7 +63,7 @@ public class Intro extends AppCompatActivity {
     public void chkLogin(){
         UserApiClient.getInstance().me((user, error) -> {
             if (error != null){
-                Intent intent = new Intent(this, Login.class);
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }else{

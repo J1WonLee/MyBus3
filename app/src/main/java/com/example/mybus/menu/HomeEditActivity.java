@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.mybus.databinding.ActivityMyAlarmBinding;
+import com.example.mybus.databinding.ActivityHomeEditBinding;
 
-public class MyAlarm extends AppCompatActivity {
-    private ActivityMyAlarmBinding binding;
+public class HomeEditActivity extends AppCompatActivity {
+    ActivityHomeEditBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMyAlarmBinding.inflate(getLayoutInflater());
+        binding = ActivityHomeEditBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 }

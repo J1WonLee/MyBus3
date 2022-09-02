@@ -21,19 +21,16 @@ import com.example.mybus.R;
 import com.example.mybus.apisearch.itemList.BusSchList;
 import com.example.mybus.databinding.FragmentBusListsBinding;
 import com.example.mybus.viewmodel.SearchViewModel;
-import com.google.android.material.tabs.TabLayout;
 
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import dagger.hilt.android.AndroidEntryPoint;
-
 
 public class BusListsFragment extends Fragment {
     private SearchViewModel searchViewModel;
     private FragmentBusListsBinding binding;
-    private SearchListAdapter searchListAdapter;
+    private BusSearchListAdapter busSearchListAdapter;
     private RecyclerView recyclerView;
 
     @Override
@@ -52,7 +49,7 @@ public class BusListsFragment extends Fragment {
             @Override
             public void onChanged(List<BusSchList> busSchLists) {
                 if (busSchLists != null){
-                    searchListAdapter.updateLists(busSchLists);
+                    busSearchListAdapter.updateLists(busSchLists);
                 }else{
                     Log.d("kkang", "busschlists is null");
                 }
@@ -67,22 +64,14 @@ public class BusListsFragment extends Fragment {
             }
         });
         setAutoResult();
-
-
-
-
-        binding.searchBusInput.setOnClickListener(view -> {
-            searchViewModel.getBusLists(binding.searchBusInput.getText().toString());
-        });
-
         return binding.getRoot();
     }
 
     public void initRecycler(){
         recyclerView = binding.searchBusLists;
-        searchListAdapter = new SearchListAdapter();
+        busSearchListAdapter = new BusSearchListAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(searchListAdapter);
+        recyclerView.setAdapter(busSearchListAdapter);
     }
 
     public void setAutoResult(){

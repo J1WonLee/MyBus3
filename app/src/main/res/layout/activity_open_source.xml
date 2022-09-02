@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".menu.OpenSource">
+    tools:context=".menu.OpenSourceActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"

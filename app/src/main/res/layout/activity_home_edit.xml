@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".menu.HomeEdit">
+        tools:context=".menu.HomeEditActivity">
 
         <TextView
             android:id="@+id/textView3"

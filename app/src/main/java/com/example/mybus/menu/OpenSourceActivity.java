@@ -4,14 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.mybus.databinding.ActivityHomeEditBinding;
+import com.example.mybus.databinding.ActivityOpenSourceBinding;
 
-public class HomeEdit extends AppCompatActivity {
-    ActivityHomeEditBinding binding;
+public class OpenSourceActivity extends AppCompatActivity {
+    private ActivityOpenSourceBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityHomeEditBinding.inflate(getLayoutInflater());
+        binding = ActivityOpenSourceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
     }
 }

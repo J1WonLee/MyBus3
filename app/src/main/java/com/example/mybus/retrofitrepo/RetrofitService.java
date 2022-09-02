@@ -56,14 +56,15 @@ public interface RetrofitService {
 
     // 키워드로 정류장을 검색한다
     @GET("stationinfo/getStationByName")
-    Single<StopSearchUidWrap> schStopKeyword2(
+    Single<StopSearchWrap> schStopKeywordv2(
             @Query("ServiceKey") String servieKey,
             @Query("stSrch") String keyword,
             @Query("resultType") String json
     );
-
+    
+    // id로 정류장 상세를 검색한다
     @GET("stationinfo/getStationByUid")
-    Single<StopSearchUidWrap> schStopUid2(
+    Single<StopSearchUidWrap> schStopUidv2(
             @Query("ServiceKey") String servieKey,
             @Query("arsId") String ardId,
             @Query("resultType") String json
